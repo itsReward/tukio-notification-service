@@ -18,7 +18,7 @@ class EmailConfig {
 
         val templateResolver = StringTemplateResolver()
         templateResolver.templateMode = TemplateMode.HTML
-        templateResolver.cacheable = false
+        templateResolver.setCacheable(false)
 
         templateEngine.setTemplateResolver(templateResolver)
 

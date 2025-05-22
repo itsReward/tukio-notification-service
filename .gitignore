@@ -46,3 +46,5 @@ logs/
 
 ### Local config ###
 application-local.properties
+
+./lib

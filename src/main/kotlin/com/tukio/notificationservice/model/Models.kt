@@ -80,6 +80,9 @@ data class Notification(
     @Column(nullable = true)
     var readAt: LocalDateTime? = null,
 
+    @OneToMany(mappedBy = "notificationId", cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
+    val deliveryAttempts: MutableList<NotificationDeliveryAttempt> = mutableListOf(),
+
     @Column(nullable = false)
     val createdAt: LocalDateTime = LocalDateTime.now(),
 
